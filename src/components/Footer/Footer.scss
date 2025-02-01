@@ -1,0 +1,99 @@
+.footer {
+    background: #1F1F1F;
+    padding: 30px;
+    gap: 30px;
+
+    &__links {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        column-gap: 20px;
+
+        &-link {
+            color: var(--text-color);
+            opacity: 0.6;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+            transition: all .3s linear;
+
+            &:hover {
+                opacity: 1;
+            }
+
+        }
+
+    }
+
+    &__block {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        column-gap: 10%;
+        padding: 20px 0;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &-txt {
+            font-family: "Montserrat";
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 1.2;
+            color: var(--text-color);
+            opacity: 0.5;
+            display: flex;
+            gap: 10px;
+
+            & i {
+                font-style: normal;
+                color: var(--text-color);
+                opacity: 0.5;
+                font-size: 14px;
+                font-weight: 400;
+                cursor: pointer;
+                transition: all .3s linear;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+
+        }
+    }
+
+    &__right {
+        &-txt {
+            font-family: "Montserrat";
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 1.2;
+            color: var(--text-color);
+            opacity: 0.5;
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            gap: 10px;
+
+            & a {
+
+                font-style: normal;
+                color: var(--text-color);
+                opacity: 0.5;
+                font-size: 14px;
+                font-weight: 400;
+                cursor: pointer;
+                transition: all .3s linear;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+}

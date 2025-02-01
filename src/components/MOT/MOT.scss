@@ -1,0 +1,261 @@
+.popular {
+    padding: 25px 0;
+
+    @include media(720) {
+        padding: 0;
+        padding-top: 25px;
+    }
+
+
+
+    &__title {
+        max-width: max-content;
+        margin-left: 100px;
+        margin-bottom: 35px;
+        padding-bottom: 10px;
+        color: var(--text-color);
+        opacity: 0.4;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        position: relative;
+        transition: .3s linear;
+
+     
+        &:hover {
+            opacity: 1;
+
+        }
+   
+
+    & i {
+        font-size: 30px;
+
+
+    }
+    @include media(960) {
+        margin-left: 50px;
+    }
+    
+    @include media(720) {
+        margin-left: 30px;
+    }
+
+    @include media(576) {}
+
+    @include media(450) {
+        font-size: 16px;
+    }
+ }
+
+
+
+
+
+    &__item {
+        width: 100%;
+        position: relative;
+        height: 465px;
+        color: var(--button-text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 10px;
+        box-shadow: 0px 4px 4px 0px #000000;
+        border: 1px solid var(--black);
+        cursor: pointer;
+        overflow: hidden;
+        transition: .3s linear;
+
+        &-txt {
+            height: 465px;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            row-gap: 10px;
+            font-size: 20px;
+            line-height: 1.5;
+            text-transform: uppercase;
+            font-weight: 700;
+
+
+            @include media(450) {
+                font-size: 16px;
+            }
+        }
+
+
+
+        &-rating {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            padding: 5px;
+            border-radius: 5px;
+            display: inline-block;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            min-width: 50px;
+
+            @include media(960) {
+                font-size: 16px;
+
+            }
+
+            @include media(450) {
+                font-size: 12px;
+                min-width: 40px;
+            }
+
+            @include media(320) {
+                font-size: 16px;
+                min-width: 50px;
+            }
+
+        }
+
+
+
+
+
+        & i {
+            font-size: 50px;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+
+        }
+
+
+        &:hover {
+            opacity: 0.4;
+            border: 1px solid var(--button-text);
+        }
+
+        &-link {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: none;
+            left: 0;
+            top: 0;
+
+            @include media(720) {
+                display: block;
+            }
+
+        }
+
+      
+
+
+
+        @include media(720) {
+            object-fit: contain;
+        }
+    }
+}
+
+ .swiper {
+    padding: 0 100px;
+    margin-bottom: 30px;
+
+    @include media(450) {
+        margin-bottom: 10px;
+    }
+
+    &-slide {
+        display: flex;
+        justify-content: start;
+        width: 20%;
+        text-align: center;
+
+        @include media(1400) {
+
+            height: 325px;
+        }
+
+        @include media(1200) {
+
+            height: 335px;
+        }
+
+        @include media(960) {
+
+            height: 300px;
+        }
+
+        @include media(720) {
+
+            height: 300px;
+        }
+
+        @include media(576) {
+
+            height: 382px;
+        }
+
+        @include media(450) {
+
+            height: 300px;
+        }
+
+        @include media(380) {
+
+            height: 250px;
+        }
+
+
+        @include media(320) {
+
+            height: 350px;
+        }
+
+
+
+
+    }
+
+    @include media(960) {
+
+        padding: 0 30px;
+    }
+
+    @include media(720) {
+        padding: 0 15px;
+    }
+
+
+
+
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    opacity: 1;
+    color: var(--button-text);
+
+    &.swiper-button-disabled {
+        display: none;
+    }
+
+    &::after {
+        font-size: 40px;
+        font-weight: 700px;
+    }
+
+    @include media(720) {
+        display: none;
+    }
+}
