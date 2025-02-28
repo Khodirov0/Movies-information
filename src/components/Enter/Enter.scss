@@ -5,8 +5,9 @@
     align-items: center;
     height: 100vh;
     object-fit: cover;
-    background: url("@/assets/images/bg-enter.webp") no-repeat center / cover;
-    min-width: max-content;
+    background: url("@/assets/images/bg-enter.webp") no-repeat center center;
+    background-size: cover;
+    min-width: 100vw;
 
     &_error {
         font-size: 16px;
@@ -14,12 +15,12 @@
     }
 
     &_box {
-        max-width: max-content;
+        width: 90%;
+        max-width: 400px;
         margin: 0 auto;
         padding: 50px;
         border-radius: 30px;
         background: rgba(0, 0, 0, 0.8);
-
 
         &-title {
             font-size: 36px;
@@ -28,14 +29,10 @@
             color: white;
         }
 
-
         &-form {
-            width: 400px;
+            width: 100%;
             padding: 10px 20px;
             border-radius: 5px;
-
-
-
 
             & input {
                 font-size: 18px;
@@ -45,7 +42,6 @@
                 padding: 15px;
                 border: 1px solid #ccc;
                 border-radius: 5px;
-             
 
                 &:focus {
                     border-color: #10B981;
@@ -65,7 +61,6 @@
                 color: #fff;
                 cursor: pointer;
                 background: #10B981;
-                cursor: pointer;
                 transition: all 0.3s linear;
 
                 &:hover {
@@ -73,7 +68,6 @@
                     color: #fefefe;
                 }
             }
-
         }
 
         &-checkbox {
@@ -82,7 +76,6 @@
             justify-content: space-between;
             color: #fff;
             margin: 10px 0;
-         
 
             &-left {
                 display: flex;
@@ -91,12 +84,10 @@
                 gap: 10px;
                 user-select: none;
 
-                & input {  
+                & input {
                     width: 20px;
                     height: 20px;
                 }
-
-
 
                 &-txt {
                     white-space: nowrap;
@@ -134,6 +125,103 @@
                 }
             }
         }
+    }
+}
 
+@mixin media($size) {
+    @media (max-width: #{$size}px) {
+        @content;
+    }
+}
+
+@include media(1024) {
+    .enter_box {
+        padding: 40px;
+    }
+    .enter_box-form {
+        width: 350px;
+    }
+}
+
+@include media(768) {
+    .enter_box {
+        padding: 30px;
+    }
+    .enter_box-form {
+        width: 300px;
+    }
+    .enter_box-title {
+        font-size: 28px;
+    }
+}
+
+@include media(480) {
+    .enter {
+        align-items: center;
+        height: 100vh;
+        padding: 0;
+        min-width: 100vw;
+    }
+    .enter_box {
+        width: 90%;
+        max-width: 400px;
+        padding: 0;
+        border-radius: 20px;
+    }
+    .enter_box-form {
+        width: 100%;
+    }
+    .enter_box-title {
+        font-size: 24px;
+        margin: 0 0 15px;
+        text-align: center;
+    }
+    .enter_box-form-btn {
+        font-size: 16px;
+        padding: 8px;
+    }
+    .enter_box-checkbox-left-txt{
+        font-size: 14px;
+    }
+    .enter_box-checkbox-forgot{
+        font-size: 12px;
+        padding-left: 10px;
+    }
+}
+
+@include media(350) {
+    .enter_box {
+        padding: 15px;
+    }
+    .enter_box-title {
+        font-size: 20px;
+    }
+}
+
+@include media(300) {
+    .enter_box {
+        padding: 10px;
+    }
+    .enter_box-title {
+        font-size: 18px;
+    }
+   
+    .enter_box-form {
+        width: 100%;
+    }
+    .enter_box-checkbox-forgot{
+   display: none;
+    }
+}
+
+@include media(270) {
+    .enter_box {
+        padding: 5px;
+    }
+    .enter_box-title {
+        font-size: 16px;
+    }
+    .enter_box-form {
+        width: 100%;
     }
 }

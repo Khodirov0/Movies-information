@@ -1,3 +1,9 @@
+@mixin media($size) {
+    @media (max-width: #{$size}px) {
+        @content;
+    }
+}
+
 .main {
     background: var(--bg-color);
     position: relative;
@@ -10,7 +16,7 @@
         background: var(--bg-color);
         padding: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
+        overflow-x: auto; // Enable horizontal scrolling if needed
 
         &-box {
             margin-top: 90px;
@@ -22,7 +28,8 @@
             width: 100%;
             background: #33333b;
             border-radius: 10px;
-       
+            min-width: 1000px; // Ensures scrolling when viewport is smaller
+
             &-title {
                 font-weight: 400;
                 font-size: 16px;
@@ -31,3 +38,12 @@
         }
     }
 }
+
+// Enable scrolling when the screen is smaller than 1400px
+@include media(1400) {
+    .main__list {
+padding-top: 100px;
+        &-box {
+            display: none;
+        }
+    }}

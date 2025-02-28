@@ -115,14 +115,14 @@ const returnMovie = (content, type) => {
     popularStore.movies.unshift(content);
   }
 };
-</script>
-<style lang="scss" scoped>
+</script><style lang="scss" scoped>
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   margin-top: 0px;
+  overflow-x: auto; // Enable horizontal scrolling if needed
 
   &-item {
     display: flex;
@@ -132,6 +132,7 @@ const returnMovie = (content, type) => {
     margin: 5px 0;
     color: #e8e8e8;
     border-bottom: 1px solid #2c2d33;
+    min-width: 900px; // Ensures scrolling on small screens
 
     &__image {
       width: 60px;
@@ -178,10 +179,12 @@ const returnMovie = (content, type) => {
         color: #ef4444;
       }
     }
+
     &__btn {
       color: #10b981;
       font-weight: 700;
     }
+
     &__btns {
       display: flex;
       align-items: center;
@@ -198,4 +201,48 @@ const returnMovie = (content, type) => {
   transform: rotate(45deg);
   transition: transform 0.3s ease;
 }
+
+// Media Queries for smaller screens
+@mixin media($size) {
+  @media (max-width: #{$size}px) {
+    @content;
+  }
+}
+
+@include media(1400) {
+  .content {
+    overflow-x: auto;
+    width: 100%;
+    align-items: start;
+  }
+
+  .content-item {
+    min-width: 1200px;
+  }
+}
+
+@include media(992) {
+    .content-item {
+        min-width: 1000px;
+    }
+}
+
+@include media(768) {
+    .content-item {
+        min-width: 900px;
+    }
+}
+
+@include media(480) {
+    .content-item {
+        min-width: 800px;
+    }
+}
+
+@include media(270) {
+    .content-item {
+        min-width: 700px;
+    }
+}
+
 </style>
