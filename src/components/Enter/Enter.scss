@@ -1,0 +1,139 @@
+.enter {
+    font-family: "Inter";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    object-fit: cover;
+    background: url("@/assets/images/bg-enter.webp") no-repeat center / cover;
+    min-width: max-content;
+
+    &_error {
+        font-size: 16px;
+        color: #EF4444;
+    }
+
+    &_box {
+        max-width: max-content;
+        margin: 0 auto;
+        padding: 50px;
+        border-radius: 30px;
+        background: rgba(0, 0, 0, 0.8);
+
+
+        &-title {
+            font-size: 36px;
+            margin: 0 0 20px 30px;
+            text-align: start;
+            color: white;
+        }
+
+
+        &-form {
+            width: 400px;
+            padding: 10px 20px;
+            border-radius: 5px;
+
+
+
+
+            & input {
+                font-size: 18px;
+                color: #fff;
+                width: 100%;
+                margin-bottom: 15px;
+                padding: 15px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+             
+
+                &:focus {
+                    border-color: #10B981;
+                }
+            }
+
+            &-btn {
+                font-size: 18px;
+                line-height: 1;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                border-radius: 10px;
+                padding: 10px;
+                color: #fff;
+                cursor: pointer;
+                background: #10B981;
+                cursor: pointer;
+                transition: all 0.3s linear;
+
+                &:hover {
+                    background: #0b7f58;
+                    color: #fefefe;
+                }
+            }
+
+        }
+
+        &-checkbox {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            color: #fff;
+            margin: 10px 0;
+         
+
+            &-left {
+                display: flex;
+                align-items: start;
+                justify-content: center;
+                gap: 10px;
+                user-select: none;
+
+                & input {  
+                    width: 20px;
+                    height: 20px;
+                }
+
+
+
+                &-txt {
+                    white-space: nowrap;
+                    font-size: 18px;
+                }
+            }
+
+            &-forgot {
+                color: #606060;
+                font-size: 16px;
+                cursor: pointer;
+                transition: all 0.3s linear;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+
+        &-register {
+            margin: 10px 0 0 20px;
+            font-size: 18px;
+            color: #606060;
+
+            & button {
+                background: transparent;
+                font-size: 18px;
+                border: none;
+                color: #fff;
+                cursor: pointer;
+                transition: all 0.3s linear;
+
+                &:hover {
+                    color: #fefefe;
+                }
+            }
+        }
+
+    }
+}

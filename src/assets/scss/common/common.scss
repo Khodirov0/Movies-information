@@ -1,0 +1,88 @@
+:root {
+    --black: #000;
+    --bg-color: #141414;
+    --bg2-color: white;
+    --text-color: white;
+    --button-bg: #149A03;
+    --button-text: white;
+    --link-nav: rgba(255, 255, 255, 0.6);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // user-select: none;
+}
+
+@mixin media($size) {
+    @media (max-width: #{$size}px) {
+        @content;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: "Raleway";
+    font-weight: 400;
+    background: var(--bg-color);
+    overflow-x: hidden;
+}
+
+button,
+input {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: "Raleway";
+}
+
+main {
+    padding-bottom: 70px;
+}
+
+
+
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @include media(540) {
+        max-width: unset;
+    }
+}
+
+
+
+$Container:(1320, 1140),
+(1140, 960),
+(960, 720),
+(720, 540);
+
+
+@each $size,
+$width in $Container {
+    @include media ($size) {
+        .container {
+            max-width: #{$width}px;
+        }
+    }
+}

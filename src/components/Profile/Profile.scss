@@ -1,0 +1,135 @@
+.profile {
+    &-container {
+        max-width: 70%;
+        margin: 20px auto;
+        margin-top: 70px;
+        padding: 20px 40px;
+        border-radius: 10px;
+        background-color: #33333B;
+
+        .duration-title {
+            font-size: 20px;
+            color: white;
+            margin-bottom: 10px;
+        }
+    }
+
+    &-tag{
+        position: absolute;
+        top: 0;
+        right: 20px;
+        font-size: 48px;
+       color: #ff4757; 
+    }
+
+    &-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+position: relative;
+    }
+
+
+
+    &-duration {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+
+        p {
+            font-weight: bold;
+        }
+
+        .duration {
+
+           
+            &-btn {
+                padding: 8px 12px;
+                border-radius: 5px;
+                background-color: #fff;
+                cursor: pointer;
+                transition: all 0.3s;
+
+                &.active {
+                    background-color: #ff4757;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &-details {
+        margin-bottom: 20px;
+
+        h3 {
+            color: var(--button-text);
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                color: var(--text-color);
+                margin-bottom: 5px;
+
+                span {
+                    font-weight: bold;
+                   color: #3da858;
+                }
+            }
+        }
+    }
+
+    &-purchase {
+        p {
+            margin-bottom: 50px;
+        }
+
+        .price {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ff4757;
+
+            .old-price {
+                font-size: 24px;
+                text-decoration: line-through;
+                color: #888;
+                margin-left: 10px;
+            }
+        }
+
+        .add-to-cart {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #ff4757;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.3s ease-in-out;
+
+            & .active {
+                background-color: #e63946;
+            }
+        }
+
+        .installments {
+            margin-top: 10px;
+            font-size: 14px;
+
+            a {
+                color: #007bff;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
