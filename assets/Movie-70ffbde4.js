@@ -1,0 +1,1 @@
+import{_ as e}from"./Content-e1ee023f.js";import{m as t,n as a,o as s,d as n,k as r}from"./index-8d4312d6.js";import"./ContentItem-aea391c2.js";const m={class:"main"},d={__name:"Movie",setup(c){const o=t();return a(()=>{o.movie=null,o.totalResults=0}),(_,p)=>(s(),n("main",m,[r(e,{type:"movie"})]))}};export{d as default};
